@@ -309,7 +309,7 @@ function ProductList({ onHomeClick }) {
                                                 color: 'white',
                                                 padding: '10px 20px',
                                                 border: 'none',
-                                                borderRadius: 5px,
+                                                borderRadius: '5px',
                                                 cursor: isInCart ? 'not-allowed' : 'pointer'
                                             }}
                                         >
