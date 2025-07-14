@@ -220,6 +220,7 @@ body {
     padding: 10px;
     gap: 20px;
     height: 800px;
+    overflow: auto;
   }
 
   .landing_content {
