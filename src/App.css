@@ -208,7 +208,6 @@ body {
   .aboutus_container {
     margin-top: 30px; /* Space out AboutUs section */
     width: 90%;
-    height: fit-content;
     max-width: 450px;
     padding: 20px;
     margin-bottom: 30px; /* Add some space at the bottom */
@@ -218,11 +217,8 @@ body {
 /* Smaller Mobile Devices (e.g., up to 480px, typical smartphones) */
 @media screen and (max-width: 480px) {
   .content {
-    flex-direction: column;
     padding: 10px;
     gap: 20px;
-    height: auto;
-    min-height: 100vh;
   }
 
   .landing_content {
