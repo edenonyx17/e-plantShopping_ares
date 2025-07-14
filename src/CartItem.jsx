@@ -9,12 +9,17 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = (cart) => {
-    
+    let total = 0;
+    cart.forEach((item) => {
+      const {quantity, cost} = item;
+      total += quantity * parseFloat(cost.substring(1));
+    }); 
+    return total;
   };
 
   const handleContinueShopping = (e) => {
     e.preventDefault();
-    onContinueShopping();
+    onContinueShopping(e);
   };
 
   const handleCheckoutShopping = (e) => {
@@ -40,12 +45,14 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Calculate total cost based on quantity for an item
   const calculateTotalCost = (item) => {
-   
-  };
+    let totalCost = 0;
+    totalCost += parseFloat(item.cost.substring(1)) * item.quantity;
+    return totalCost;
+  }
 
   return (
     <div className="cart-container">
-      <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
+      <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount(cart)}</h2>
       <div>
         {cart.map(item => (
           <div className="cart-item" key={item.name}>
