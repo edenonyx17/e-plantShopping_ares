@@ -175,7 +175,7 @@ body {
     flex-direction: column; /* Stack elements vertically */
     justify-content: flex-start; /* Align content to the top */
     padding: 15px; /* Adjust padding */
-    height: 800px; /* Allow height to adjust to content */
+    height: auto; /* Allow height to adjust to content */
     min-height: 100vh; /* Ensure it still takes full viewport height if content is small */
   }
 
@@ -219,7 +219,8 @@ body {
   .content {
     padding: 10px;
     gap: 20px;
-    overflow: auto;
+    height: auto;
+    min-height: 100vh;
   }
 
   .landing_content {
@@ -249,6 +250,6 @@ body {
     border: 1px solid #ccc;
     overflow: auto;
     padding: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 100px;
   }
 }
